@@ -14,11 +14,8 @@ namespace Writing_and_reading_files
         {
             string path = @"C:\SomeDir";
             DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists)
-            {
-                dirInfo.Create();
-                using (FileStream fstream = new FileStream($"{path}\\note.txt", FileMode.OpenOrCreate)) { }
-            }
+            if (!dirInfo.Exists){dirInfo.Create();}
+            using (FileStream fstream = new FileStream($"{path}\\note.txt", FileMode.OpenOrCreate)) {}
         }
         public string Input()
         {
