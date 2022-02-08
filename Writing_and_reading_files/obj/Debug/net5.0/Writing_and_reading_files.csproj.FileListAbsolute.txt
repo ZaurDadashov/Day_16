@@ -1,0 +1,16 @@
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.exe
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.deps.json
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.runtimeconfig.json
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.runtimeconfig.dev.json
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.dll
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\ref\Writing_and_reading_files.dll
+D:\Zaur\Day_16\Writing_and_reading_files\bin\Debug\net5.0\Writing_and_reading_files.pdb
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.csproj.AssemblyReference.cache
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.GeneratedMSBuildEditorConfig.editorconfig
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.AssemblyInfoInputs.cache
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.AssemblyInfo.cs
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.csproj.CoreCompileInputs.cache
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.dll
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\ref\Writing_and_reading_files.dll
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.pdb
+D:\Zaur\Day_16\Writing_and_reading_files\obj\Debug\net5.0\Writing_and_reading_files.genruntimeconfig.cache
