@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Collections;
 
 namespace Writing_and_reading_files
 {
@@ -9,8 +8,18 @@ namespace Writing_and_reading_files
         public int ID { get; set; }
         public string Name { get; set; }
         public int Passport { get; set; }
-        public int Age { get; set; }
-        public int Payment { get; set; }
+        public byte Age { get; set; }
+        public double Payment { get; set; }
+        public Client()
+        {
+            string path = @"C:\SomeDir";
+            DirectoryInfo dirInfo = new DirectoryInfo(path);
+            if (!dirInfo.Exists)
+            {
+                dirInfo.Create();
+                using (FileStream fstream = new FileStream($"{path}\\note.txt", FileMode.OpenOrCreate)) { }
+            }
+        }
         public string Input()
         {
             for (; ; )
@@ -35,12 +44,32 @@ namespace Writing_and_reading_files
                     Console.WriteLine("Invalid input.Please try again!");
             }
         }
-        public static int InputDigits()
+        public int InputDigits()
         {
             int digits = 0;
             for (; ; )
             {
-                if (!int.TryParse(Console.ReadLine(), out digits) || digits <= 0) { Console.WriteLine("Invalid input. Please try again!"); }
+                if (!int.TryParse(Console.ReadLine(), out digits) || digits > 99999999 || digits < 10000000) { Console.WriteLine("Invalid input. Please try again!"); }
+                else
+                    return digits;
+            }
+        }
+        public byte InputAge()
+        {
+            byte digits = 0;
+            for (; ; )
+            {
+                if (!byte.TryParse(Console.ReadLine(), out digits) || digits > 115 || digits < 18) { Console.WriteLine("Invalid input. Please try again!"); }
+                else
+                    return digits;
+            }
+        }
+        public double InputAmount()
+        {
+            double digits = 0;
+            for (; ; )
+            {
+                if (!double.TryParse(Console.ReadLine(), out digits)) { Console.WriteLine("Invalid input. Please try again!"); }
                 else
                     return digits;
             }
@@ -49,22 +78,17 @@ namespace Writing_and_reading_files
         {
             string path = @"C:\SomeDir";
             DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists)
-            {
-                dirInfo.Create();
-                using (FileStream fstream = new FileStream($"{path}\\note.txt", FileMode.OpenOrCreate)) { }
-            }
-            string writePath = @"C:\SomeDir\note.txt";
-            Console.Write($"Enter ID: ");   
-            ID = InputDigits();
+            if (!dirInfo.Exists){dirInfo.Create();}
+            string writePath = @"C:\SomeDir\note.txt"; 
             Console.Write($"Enter name: ");
             Name = Input();
-            Console.Write($"Enter passport number: ");
+            Console.Write($"Enter passport number(8 digits): ");
             Passport = InputDigits();
             Console.Write($"Enter age: ");
-            Age = InputDigits();
+            Age = InputAge();
             Console.Write($"Enter payment amount: ");
-            Payment = InputDigits();
+            Payment = InputAmount();
+            ID = Math.Abs(Name.GetHashCode());
             using (StreamWriter sw = new StreamWriter(writePath, true, System.Text.Encoding.Default))
             {
                 sw.WriteLine($"ID: {ID}; Name: {Name}; Passport: AZE{Passport}; Age: {Age}; Payment: {Payment}");
@@ -76,11 +100,32 @@ namespace Writing_and_reading_files
         static void Main(string[] args)
         {
             Client client = new Client();
-            client.Add();
-            string path = @"C:\SomeDir\note.txt";
-            using (StreamReader sr = new StreamReader(path))
+            bool exit = false;
+            for (; ; )
             {
-                Console.WriteLine(sr.ReadToEnd());
+                if (exit) break;
+                Console.WriteLine("To add records, enter 1");
+                Console.WriteLine("To read data from a file, enter 2");
+                Console.WriteLine("To exit the program, enter 0");
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        client.Add();
+                        break;
+                    case "2":
+                        string path = @"C:\SomeDir\note.txt";
+                        using (StreamReader sr = new StreamReader(path))
+                        {
+                            Console.WriteLine(sr.ReadToEnd());
+                        }
+                        break;
+                    case "0":
+                        exit = true;
+                        break;
+                    default:
+                        Console.WriteLine("There is not this option!");
+                        break;
+                }
             }
             Console.ReadKey();
         }

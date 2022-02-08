@@ -8,25 +8,20 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DELL-1\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\DELL-5\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Zaur\\Day_16\\Writing_and_reading_files\\Writing_and_reading_files.csproj",
+      "projectUniqueName": "C:\\Users\\DELL-5\\Desktop\\clas\\Day_16\\Writing_and_reading_files\\Writing_and_reading_files.csproj",
       "projectName": "Writing_and_reading_files",
-      "projectPath": "D:\\Zaur\\Day_16\\Writing_and_reading_files\\Writing_and_reading_files.csproj",
-      "packagesPath": "C:\\Users\\DELL-1\\.nuget\\packages\\",
-      "outputPath": "D:\\Zaur\\Day_16\\Writing_and_reading_files\\obj\\",
+      "projectPath": "C:\\Users\\DELL-5\\Desktop\\clas\\Day_16\\Writing_and_reading_files\\Writing_and_reading_files.csproj",
+      "packagesPath": "C:\\Users\\DELL-5\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DELL-5\\Desktop\\clas\\Day_16\\Writing_and_reading_files\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DELL-1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\DELL-5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -65,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }
