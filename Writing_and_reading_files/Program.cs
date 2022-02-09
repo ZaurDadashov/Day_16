@@ -73,9 +73,6 @@ namespace Writing_and_reading_files
         }
         public void Add()
         {
-            string path = @"C:\SomeDir";
-            DirectoryInfo dirInfo = new DirectoryInfo(path);
-            if (!dirInfo.Exists){dirInfo.Create();}
             string writePath = @"C:\SomeDir\note.txt"; 
             Console.Write($"Enter name: ");
             Name = Input();
