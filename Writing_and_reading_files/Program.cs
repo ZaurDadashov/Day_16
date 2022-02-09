@@ -66,7 +66,7 @@ namespace Writing_and_reading_files
             double digits = 0;
             for (; ; )
             {
-                if (!double.TryParse(Console.ReadLine(), out digits)) { Console.WriteLine("Invalid input. Please try again!"); }
+                if (!double.TryParse(Console.ReadLine(), out digits) || digits <= 0) { Console.WriteLine("Invalid input. Please try again!"); }
                 else
                     return digits;
             }
